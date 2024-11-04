@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary Mwaniki Foundation For Individuals with Disabilities</title>
+    <style>
+        /* Basic styling */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box; background-color: #f4f4f4; color: #333; }
+        header, section, footer { padding: 20px; text-align: center; }
+        header { background-color: #4CAF50; color: white; }
+        header img { width: 60px; height: auto; vertical-align: middle; }
+        header h1 { display: inline; font-size: 28px; margin-left: 10px; }
+        header nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+        header nav a:hover { color: #ddd; }
+
+        /* Slideshow styling */
+        #slideshow-container { position: relative; max-width: 100%; margin: auto; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        .slide { display: none; position: relative; }
+        .active { display: block; }
+        .caption { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: #fff; background: rgba(0, 0, 0, 0.7); padding: 10px; font-size: 1.2em; border-radius: 5px; }
+        .prev, .next { cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); color: #fff; padding: 12px; font-weight: bold; background-color: rgba(0,0,0,0.7); border-radius: 3px; transition: background-color 0.3s; }
+        .next { right: 10px; }
+        .prev { left: 10px; }
+        .prev:hover, .next:hover { background-color: rgba(0,0,0,0.9); }
+
+        /* Professional slideshow size */
+        #slideshow-container img { max-height: 500px; width: 100%; object-fit: cover; border-radius: 8px; }
+
+        /* Program section styling */
+        #programs { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 20px 0; }
+        .program { border: 1px solid #ddd; padding: 20px; width: 250px; text-align: center; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); background-color: white; }
+        .program img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; }
+        .more-button { display: inline-block; margin-top: 10px; padding: 8px 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s; }
+        .more-button:hover { background-color: #45a049; }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            #programs { flex-direction: column; align-items: center; }
+            .program { width: 80%; }
+        }
+
+        /* Contact and Donation styling */
+        #contact, #donate, .gallery { margin: 20px 0; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <img src="images/logo.png" alt="Logo"> <!-- Replace with your logo image -->
+    <h1>MARY MWANIKI FOUNDATION FOR INDIVIDUALS WITH DISABILITIES</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#contact">Contact</a>
+        <a href="#donate">Donate</a>
+    </nav>
+</header>
+
+<!-- Slideshow Section -->
+<section id="slideshow-container">
+    <div class="slide active">
+        <img src="images/slide1.jpg" alt="Empowering Individuals with Disabilities">
+        <div class="caption">Empowering Individuals with Disabilities</div>
+    </div>
+    <div class="slide">
+        <img src="images/slide2.jpg" alt="Supporting Independence and Inclusion">
+        <div class="caption">Supporting Independence and Inclusion</div>
+    </div>
+    <div class="slide">
+        <img src="images/slide3.jpg" alt="Advocating for Equal Opportunities">
+        <div class="caption">Advocating for Equal Opportunities</div>
+    </div>
+    <!-- Navigation buttons -->
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>Our mission is to provide support, resources, and advocacy to individuals with disabilities, helping them live empowered and inclusive lives.</p>
+</section>
+
+<!-- Programs Section -->
+<section id="programs">
+    <h2>Our Empowerment Programs</h2>
+    <div class="program">
+        <img src="images/diapers.jpg" alt="Essential Supplies Program">
+        <h3>Essential Supplies Program</h3>
+        <p>Providing hygiene products, including diapers and prostheses.</p>
+        <a class="more-button" href="#gallery1">More</a>
+    </div>
+    <div class="program">
+        <img src="images/food.jpg" alt="Nutrition Support Program">
+        <h3>Nutrition Support Program</h3>
+        <p>Ensuring access to nutritious meals and essential groceries.</p>
+        <a class="more-button" href="#gallery2">More</a>
+    </div>
+    <div class="program">
+        <img src="images/assistive.jpg" alt="Assistive Devices Program">
+        <h3>Assistive Devices Program</h3>
+        <p>Providing wheelchairs, hearing aids, and other assistive devices.</p>
+        <a class="more-button" href="#gallery3">More</a>
+    </div>
+    <div class="program">
+        <img src="images/therapy.jpg" alt="Therapy and Counseling">
+        <h3>Therapy and Counseling</h3>
+        <p>Offering mental health support, counseling, and therapy.</p>
+        <a class="more-button" href="#gallery4">More</a>
+    </div>
+    <div class="program">
+        <img src="images/reusable.jpg" alt="Sustainable Products">
+        <h3>Sustainable Products</h3>
+        <p>Producing affordable and reusable products for daily needs.</p>
+        <a class="more-button" href="#gallery5">More</a>
+    </div>
+    <div class="program">
+        <img src="images/daycare.jpg" alt="Inclusive Daycare Services">
+        <h3>Inclusive Daycare Services</h3>
+        <p>Providing safe and inclusive environments for children.</p>
+        <a class="more-button" href="#gallery6">More</a>
+    </div>
+    <div class="program">
+        <img src="images/community.jpg" alt="Community Engagement Activities">
+        <h3>Community Engagement Activities</h3>
+        <p>Engaging the community in support initiatives and activities.</p>
+        <a class="more-button" href="#gallery7">More</a>
+    </div>
+    <div class="program">
+        <img src="images/sensitization.jpg" alt="Advocacy and Awareness">
+        <h3>Advocacy and Awareness</h3>
+        <p>Promoting awareness on inclusion and accessibility rights.</p>
+        <a class="more-button" href="#gallery8">More</a>
+    </div>
+</section>
+
+<!-- Gallery Sections -->
+<section id="gallery1" class="gallery">
+    <h2>Essential Supplies Gallery</h2>
+    <img src="images/gallery1a.jpg" alt="Gallery Image 1" style="width: 100%; height: auto;">
+    <img src="images/gallery1b.jpg" alt="Gallery Image 2" style="width: 100%; height: auto;">
+</section>
+
+<section id="gallery2" class="gallery">
+    <h2>Nutrition Support Gallery</h2>
+    <img src="images/gallery2a.jpg" alt="Gallery Image 1" style="width: 100%; height: auto;">
+    <img src="images/gallery2b.jpg" alt="Gallery Image 2" style="width: 100%; height: auto;">
+</section>
+
+<section id="gallery3" class="gallery">
+    <h2>Assistive Devices Gallery</h2>
+    <img src="images/gallery3a.jpg" alt="Gallery Image 1" style="width: 100%; height: auto;">
+    <img src="images/gallery3b.jpg" alt="Gallery Image 2" style="width: 100%; height: auto;">
+</section>
+
+<section id="gallery4" class="gallery">
+    <h2>Therapy and Counseling Gallery</h2>
+    <img src="images/gallery4a.jpg" alt="Gallery Image 1" style="width: 100%; height: auto;">
+    <img src="images/gallery4b.jpg" alt="Gallery Image 2" style="width: 100%; height: auto;">
+</section>
+
+<section id="gallery5" class="gallery">
+    <h2>Sustainable Products Gallery</h2>
+    <img src="images/gallery5a.jpg" alt="Gallery Image 1" style="width: 100%; height: auto;">
+    <img src="images/gallery5b.jpg" alt="Gallery Image 2" style="width: 100%; height: auto;">
+</section>
+
+<section id="gallery6" class="gallery">
+    <h2>Inclusive Daycare Services Gallery</h2>
+    <img src="images/gallery6a.jpg" alt="Gallery Image 1" style="width: 100%; height: auto;">
+    <img src="images/gallery6b.jpg" alt="Gallery Image 2" style="width: 100%; height: auto;">
+</section>
+
+<section id="gallery7" class="gallery">
+    <h2>Community Engagement Gallery</h2>
+    <img src="images/gallery7a.jpg" alt="Gallery Image 1" style="width: 100%; height: auto;">
+    <img src="images/gallery7b.jpg" alt="Gallery Image 2" style="width: 100%; height: auto;">
+</section>
+
+<section id="gallery8" class="gallery">
+    <h2>Advocacy and Awareness Gallery</h2>
+    <img src="images/gallery8a.jpg" alt="Gallery Image 1" style="width: 100%; height: auto;">
+    <img src="images/gallery8b.jpg" alt="Gallery Image 2" style="width: 100%; height: auto;">
+</section>
+
+<!-- Contact Section -->
+<div class="pictorial-section" style="text-align: center; margin-top: 20px;">
+    <h2>Our Programs In Pictorial</h2>
+</div>
+
+<p style="margin-top: 20px; text-align: center;">Download our comprehensive guide:</p>
+<a href="docs/mwaniki-foundation-guide.pdf" target="_blank" style="text-decoration: none; display: block; text-align: center; margin: 10px 0;">
+    <button style="padding: 8px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px;">Download PDF</button>
+</a>
+
+
+<!-- Contact Section -->
+<section id="contact">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head> Feel free to contact us via the channels below
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            .social-icon {
+                font-size: 24px; /* Adjust size as needed */
+                margin-right: 10px; /* Spacing between icons */
+                color: inherit; /* Inherit color for uniformity */
+            }
+            .whatsapp { color: #25D366; }
+            .facebook { color: #4267B2; }
+            .instagram { color: #C13584; }
+            .youtube { color: #FF0000; }
+            .twitter { color: #1DA1F2; }
+            .gmail { color: #D14836; }
+            .tiktok { color: #69C9D0; } /* TikTok color */
+            .phone { color: #34b7f1; } /* Phone color */
+            .social-icon:hover {
+                opacity: 0.7; /* Change opacity on hover */
+            }
+            .phone-number {
+                margin-top: 10px; /* Spacing above the phone number */
+                font-size: 18px; /* Font size for the phone number */
+                color: #34b7f1; /* Color of the phone number */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="phone-number">Phone: +254795862318</div> <!-- Phone number -->
+        
+        <a href="tel:+25795862318" target="_blank" aria-label="Phone" class="social-icon phone">
+            <i class="fas fa-phone-alt"></i> <!-- Phone icon -->
+        </a>
+        <a href="https://wa.me/yourwhatsapplink" target="_blank" aria-label="WhatsApp" class="social-icon whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.facebook.com/yourfacebooklink" target="_blank" aria-label="Facebook" class="social-icon facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/yourinstagramlink" target="_blank" aria-label="Instagram" class="social-icon instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/youryoutubechannel" target="_blank" aria-label="YouTube" class="social-icon youtube">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://twitter.com/yourtwitterlink" target="_blank" aria-label="Twitter" class="social-icon twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="mailto:info@example.com" target="_blank" aria-label="Gmail" class="social-icon gmail">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.tiktok.com/@yourtiktokusername" target="_blank" aria-label="TikTok" class="social-icon tiktok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </body>
+    </html>
+    
+</section>
+
+    
+<!-- Donate Section -->
+<section id="donate">
+    <div class="donation-section" style="margin-top: 20px; text-align: center;">
+        <h2>Support Us with Your Donation</h2>
+        <p>Your contributions help us continue our mission. Every donation, no matter the size, makes a difference!</p>
+        
+        <h3>Donation Methods</h3>
+        <div style="margin: 10px 0;">
+            <div style="margin-bottom: 10px;">
+                <img src="images/mpesa-icon.png" alt="M-Pesa Paybill" style="width: 50px; vertical-align: middle;">
+                <strong>M-Pesa Paybill:</strong> <span>4037339</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <img src="images/mpesa-icon.png" alt="M-Pesa Number" style="width: 50px; vertical-align: middle;">
+                <strong>M-Pesa Number:</strong> <span>0712345678</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <img src="images/cooperative-icon.png"alt="Cooperative Bank" style="width: 50px; vertical-align: middle;">
+                <strong>Cooperative Bank Account Number:</strong> <span>01128146341000</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <strong>Cooperative Branch:</strong> <span>Katus Branch</span>
+            </div>
+        </div>
+        
+        <p>Thank you for your generosity God blesses a chearful giver.</p>
+    </div>
+    
+    
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Mary Mwaniki Foundation. All rights reserved.</p>
+</footer>
+
+<!-- Slideshow JavaScript -->
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("slide");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex - 1].style.display = "block";  
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+
+    function changeSlide(n) {
+        slideIndex += n;
+        if (slideIndex < 1) { slideIndex = slides.length; }
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        showSlides();
+    }
+</script>
+
+</body>
+</html>
